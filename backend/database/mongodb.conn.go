@@ -12,7 +12,7 @@ import (
 var (
 	usr     = "mynor"
 	pwd     = "123456"
-	host    = "localhost"
+	host    = "db"
 	port    = 27017
 	datbase = "practica"
 )

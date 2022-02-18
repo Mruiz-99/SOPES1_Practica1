@@ -1,0 +1,35 @@
+version: "2.3"
+services: 
+  backend:
+    container_name: backend
+    image: mruiz01329/backend_p1_201801329
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+    links:
+      - "database:db"
+    depends_on:
+    - database
+
+  database:
+    container_name: database
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - "./database/:/data/db"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mynor
+      - MONGO_INITDB_ROOT_PASSWORD=123456
+    logging:
+      driver: none
+
+  frontend:
+    container_name: frontend
+    image: mruiz01329/frontend_p1_201801329
+    ports:
+    - "80:80"
+    restart: always
+    depends_on:
+    - backend
+
