@@ -9,55 +9,46 @@
 
 # Manual de usuario
 ##### 201801329 Mynor Rene Ruiz Guerra
+##### 201712132 Erick Daniel Poron Muñoz
 
 ----
  
 ### Descripcion
-Se realizo una aplicacion que tiene como funcionalidad una calculadora que realiza operaciones basicas como: suma, resta, multiplicacion y division. La aplicacion cuenta con una seccion de "Logs" donde podra visualizar las operaciones realizadas con anterioridad, los numeros ingresaros (2 numeros), el tipo de operacion que se realizo y su resultado, tambien la fecha y hora en la que se realizo dicha operacion.
+A continuacion se presenta una guia la cual sirve para poder orientar al lector al uso de una aplicacion web la cual tiene como  objetivo mostrar en tiempo real la informacion de la memoria y procesos de dos maquinas virtuales las cuales se encuentran en la nube, de manera que el lector podra observar los detalles de estas asi como una grafica en tiempo real que le permita comparar el proceso de trabajo de ambas maquinas.
 
 ----
 
 ### Requerimientos del sistema
 
 Para que la aplicacion se pueda visualizar necesitara tener instalado en una computadora los siguientes programas:
-- docker
-- docker-compose
+- Navegador Web
 
 ----
 
 
 ### Configuracion del entorno
 
-Una vez tengamos docker y docker-compose instalados en nuestra maquina, podremos visualizar la aplicacion en nuestro navegador, para ello tendremos que seguir los siguientes pasos:
-1. Abrir una terminarl
-2. Ubicarnos en la ruta en donde tenemos almacenado nuestro archivo .yaml de docker-compose
-3. Ingresamos lo siguiente ``docker-compose up -d`` y presionamos Enter
+De manera que como hemos detallado anteriormente para mejor manejo de la aplicacion se requiere una computadora, pero enrealidad podriamos acceder desde cualquier dispositivo que cuente con un navegador y que nos permita visualizar la informacion:
+1. [Endpoint Memoria Ram](https://fase1test-3xrozdrxiq-uc.a.run.app/memory) 
+2. [Endpoint Procesos CPU](https://fase1test-3xrozdrxiq-uc.a.run.app/process) 
+3. [Endpoint Logs](https://fase1test-3xrozdrxiq-uc.a.run.app/logs) 
 
-Cuando este proceso termine podremos ingresar en nuestro navegador la ruta "localhost/calculadora", alli podra utilizar la aplicacion.
-
+Una vez tenemos acceso a un navegador web, podriamos redirigirnos con ayuda de este manual al link de acceso desde los hipervinculos anteriores.
 
 ----
 
 
-### Pantalla principal
-La calculadora cuenta con un input en donde podra ingresar los numeros por medio del teclado, tiene diferentes botones para cada una de las operaciones que podra realizar. En la parte superior contiene un navegador de pestañas en la cual podra hacer el cambio de vista entre los logs de la calculadora y la calculadora.
-
-
-#### Pasos para realizar una operacion
-
-1. Ingrese el primer numero
-2. Haga click en la operacion que desee realizar
-3. Ingrese el segundo digito
-4. Haga click en el boton con el signo de igual ( = )
-5. La respuesta le aparecera en el input
-
+### Endpoint Memoria RAM
+En esta pantalla podra observar en tiempo real los detalles de la memoria ram, ademas de una grafica que le permitira realizar una comparativa de ambas memoria en porcentaje de uso.
 
 <img width="402" alt="image" src="https://user-images.githubusercontent.com/69278553/154809455-212ad12b-3131-4258-83d1-c4ea6fbff98f.png">
 
-#### Pasos para visualizar los logs de la calculadora
-1. Haga click sobre Logs
-2. Haga click sobre el boton Consultar
+### Endpoint Procesos de CPU
+En esta pantalla podra observar una tabla que le permitira poder observar los procesos del cpu que se estan llevando acabo de la maquina virtual que se haya desplegado
 
 <img width="542" alt="image" src="https://user-images.githubusercontent.com/69278553/154809644-77e9e77f-fe6d-475b-9fd7-8867d03ba61f.png">
 
+### Endpoint Logs
+En esta pantalla podra observar un historial de los registros de logs que se han llevado acabo atraves el tiempo
 
+<img width="542" alt="image" src="https://user-images.githubusercontent.com/69278553/154809644-77e9e77f-fe6d-475b-9fd7-8867d03ba61f.png">
